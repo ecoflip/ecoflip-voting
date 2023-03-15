@@ -122,10 +122,6 @@ mod ecoflip_voting {
 
 #[derive(Accounts)]
 pub struct CreateVote<'info> {
-    // We must specify the space in order to initialize an account.
-    // First 8 bytes are default account discriminator,
-    // next 8 bytes come from NewAccount.data being type u64.
-    // (u64 = 64 bits unsigned integer = 8 bytes)
     //todo space
     #[account(init, payer = signer, space = 8 + 8 + 32 + 8 + 1 + 32)]
     pub vote_account: Account<'info, VoteAccount>,
@@ -151,10 +147,6 @@ pub struct NewDistribution<'info> {
 
 #[derive(Accounts)]
 pub struct CreateCurrentDistribution<'info> {
-    // We must specify the space in order to initialize an account.
-    // First 8 bytes are default account discriminator,
-    // next 8 bytes come from NewAccount.data being type u64.
-    // (u64 = 64 bits unsigned integer = 8 bytes)
     // todo space
     #[account(init, payer = signer, space = 8 + 8 + 8)]
     pub current_distro_account: Account<'info, CurrentDistributionAccount>,
@@ -165,10 +157,6 @@ pub struct CreateCurrentDistribution<'info> {
 
 #[derive(Accounts)]
 pub struct ReleaseFunds<'info> {
-     //We must specify the space in order to initialize an account.
-     //First 8 bytes are default account discriminator,
-     //next 8 bytes come from NewAccount.data being type u64.
-     //(u64 = 64 bits unsigned integer = 8 bytes)
      //todo space
     #[account(mut)]
     pub vote_account: Account<'info, VoteAccount>,
