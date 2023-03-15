@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 const DELAY : i64 = 120;
 
-declare_id!("DBp9KBqVUVG43GtT79R2aSuEpPfXS4X4R7PXUwnVcxVA");
+declare_id!("FZU8B3uZTcUibKhEqiJzmDNCvh5gYPioy3HA5HvKEyTo");
 
 #[program] 
 mod ecoflip_voting {
