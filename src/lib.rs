@@ -22,10 +22,7 @@ mod ecoflip_voting {
       if(current_timestamp > distro_account.timestamp + DELAY){    
         return err!(DistributionEndedError::DistributionEnded);
       }
-        
-      //todo podmienka aby distribucia bola 
-      //todo podmienka aby distribucia bola otvorena. unix timestamp < distribution_account.timestamp + delay
-      //todo podmienka projekt sa nachadza medzi approved projects.
+       
         vote_account.votes = votes;
         
         vote_account.project = project;
